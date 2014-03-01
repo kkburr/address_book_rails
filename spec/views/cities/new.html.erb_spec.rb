@@ -4,9 +4,9 @@ describe "cities/new" do
   before(:each) do
     assign(:city, stub_model(City,
       :name => "MyString",
-      :population => "MyString",
-      :elevation => "MyString",
-      :state => ""
+      :population => 1,
+      :elevation => 1,
+      :state => "MyString"
     ).as_new_record)
   end
 

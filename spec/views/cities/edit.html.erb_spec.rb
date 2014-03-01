@@ -4,9 +4,9 @@ describe "cities/edit" do
   before(:each) do
     @city = assign(:city, stub_model(City,
       :name => "MyString",
-      :population => "MyString",
-      :elevation => "MyString",
-      :state => ""
+      :population => 1,
+      :elevation => 1,
+      :state => "MyString"
     ))
   end
 

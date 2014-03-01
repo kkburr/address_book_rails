@@ -5,15 +5,15 @@ describe "cities/index" do
     assign(:cities, [
       stub_model(City,
         :name => "Name",
-        :population => "Population",
-        :elevation => "Elevation",
-        :state => ""
+        :population => 1,
+        :elevation => 2,
+        :state => "State"
       ),
       stub_model(City,
         :name => "Name",
-        :population => "Population",
-        :elevation => "Elevation",
-        :state => ""
+        :population => 1,
+        :elevation => 2,
+        :state => "State"
       )
     ])
   end
@@ -22,8 +22,8 @@ describe "cities/index" do
     render
     # Run the generator again with the --webrat flag if you want to use webrat matchers
     assert_select "tr>td", :text => "Name".to_s, :count => 2
-    assert_select "tr>td", :text => "Population".to_s, :count => 2
-    assert_select "tr>td", :text => "Elevation".to_s, :count => 2
-    assert_select "tr>td", :text => "".to_s, :count => 2
+    assert_select "tr>td", :text => 1.to_s, :count => 2
+    assert_select "tr>td", :text => 2.to_s, :count => 2
+    assert_select "tr>td", :text => "State".to_s, :count => 2
   end
 end
